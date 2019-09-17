@@ -1,9 +1,6 @@
 # Jumping Clouds
 ###################################### 
 
-require 'json'
-require 'stringio'
-
 # Complete the jumpingOnClouds function below.
 def jumpingOnClouds(c)
   count = i = 0
@@ -25,16 +22,3 @@ def jumpingOnClouds(c)
 
   return count
 end
-
-fptr = File.open(ENV['OUTPUT_PATH'], 'w')
-
-n = gets.to_i
-
-c = gets.rstrip.split(' ').map(&:to_i)
-
-result = jumpingOnClouds c
-
-fptr.write result
-fptr.write "\n"
-
-fptr.close()
